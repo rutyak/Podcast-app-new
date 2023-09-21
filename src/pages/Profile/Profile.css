@@ -1,0 +1,168 @@
+.profile {
+  width: 73%;
+  margin: auto;
+  margin-top: 4rem;
+  border: 1px solid gray;
+  border-radius: 1rem;
+  padding: 3rem;
+  background-color: aliceblue;
+  overflow: hidden;
+}
+
+.profile-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6rem;
+  margin-bottom: 2rem;
+  overflow: hidden;
+}
+
+.profile-top img {
+  width: 155px;
+  border-radius: 5rem;
+}
+
+.profile button {
+  background: black;
+  color: white;
+  width: 16%;
+  border-radius: 2rem;
+  height: 3rem;
+  cursor: pointer;
+  margin-top: 0rem;
+  margin-left: auto; /* Center the button horizontally */
+  overflow: hidden;
+}
+
+hr {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.history {
+  text-align: center;
+  margin-left: -1rem;
+  margin-top: 3rem;
+}
+
+.history h1 {
+  margin: 3.5rem;
+}
+
+@media screen and (max-width: 991px) {
+  .profile {
+    width: 90%; /* Adjust width for medium-sized screens */
+    margin-top: 2rem; /* Add space at the top */
+  }
+
+  .profile button {
+    width: 100%; /* Full width for the button */
+    margin-left: 0; /* Reset left margin */
+    margin-top: 2rem; /* Add space between button and content */
+  }
+
+  .profile-top img {
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .profile {
+    width: 95%; /* Adjust width for smaller screens */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .profile {
+    width: 100%; /* Full width for small screens */
+    margin-top: 1rem; /* Add space at the top */
+  }
+
+  .main-innernav #menu {
+    display: block;
+    margin: auto;
+    margin-top: 1rem;
+    position: relative;
+    top: 2px;
+    right: 0; /* Reset right position */
+  }
+
+  .profile-top {
+    flex-direction: column; /* Stack elements vertically */
+    gap: 1rem; /* Reduce the gap between elements */
+  }
+
+  .email-name {
+    text-align: center;
+  }
+
+  .profile-top img {
+    margin-left: 0; /* Reset left margin */
+  }
+
+  .profile button {
+    width: 100%; /* Full width for the button */
+    margin-left: 0; /* Reset left margin */
+    margin-top: 1rem; /* Add space between button and content */
+  }
+}
+
+@media screen and (max-width: 991px) {
+    .profile {
+      width: 90%; /* Adjust width for medium-sized screens */
+      margin-top: 2rem; /* Add space at the top */
+    }
+  
+    .profile button {
+      width: 100%; /* Full width for the button */
+      margin-left: 0; /* Reset left margin */
+      margin-top: 2rem; /* Add space between button and content */
+    }
+
+    .profile-top img{
+        margin-left: 0;
+    }
+  }
+  
+  @media screen and (max-width: 780px) {
+    .profile {
+      width: 95%; /* Adjust width for smaller screens */
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .profile {
+      width: 100%; /* Full width for small screens */
+      margin-top: 1rem; /* Add space at the top */
+    }
+  
+    .main-innernav #menu {
+      display: block;
+      margin: auto;
+      margin-top: 1rem;
+      position: relative;
+      top: 2px;
+      right: -234px;
+     }
+
+    .profile-top {
+      flex-direction: column; /* Stack elements vertically */
+      gap: 1rem; /* Reduce the gap between elements */
+    }
+
+    .email-name{
+        text-align: center;
+    }
+  
+    .profile-top img {
+      margin-left: 0; /* Reset left margin */
+    }
+  
+    .profile button {
+      width: 100%; /* Full width for the button */
+      margin-left: 0; /* Reset left margin */
+      margin-top: 1rem; /* Add space between button and content */
+    }
+  }
+

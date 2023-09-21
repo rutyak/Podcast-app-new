@@ -1,0 +1,40 @@
+
+.audio-player{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    background-color: black;
+    color: white;
+    padding-left: 1rem;
+    height: 2.5rem;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+}
+
+.audio-player img{
+    width: 1.5rem;
+    border-radius: 11rem;
+}
+
+.duration-audio{
+    display: flex;
+    gap: 0.5rem;
+    width: 70%;
+    filter: hue-rotate(250deg);
+   
+}
+
+.duration-audio input{
+    width: 90%;
+}
+
+.volume-player{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 0.5rem;
+}

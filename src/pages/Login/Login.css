@@ -1,0 +1,76 @@
+
+.login{
+    margin-top: 4rem;
+    width: 30%;
+    text-align: center;
+    margin: auto;
+    margin-top: 4rem;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.login input{
+        width: 85%;
+        height: 1.7rem;
+        border: 1px solid gray;
+        border-radius: 0.3rem;
+        padding: 0.2rem;
+        padding-left: 1rem;
+        margin-bottom: 1.5rem;
+}
+
+.login button{
+    width: 81%;
+    border-radius: 1rem;
+    height: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.login h1{
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+    padding-top: 2rem;
+}
+
+@media screen and (max-width: 991px) {
+    .login {
+        width: 50%; /* Adjust the form width for medium screens */
+    }
+}
+
+
+
+@media screen and (max-width: 780px) {
+    .login {
+        width: 80%; /* Adjust the form width for small screens */
+    }
+
+    .login input,
+    .login button {
+        width: 100%; /* Make form elements full width */
+    }
+
+    /* Additional styles specific to screens up to 780px can be added here */
+}
+
+@media screen and (max-width: 480px) {
+    .login {
+        width: 90%; /* Adjust the form width for extra small screens */
+    }
+
+    .login input,
+    .login button {
+        width: 100%; /* Make form elements full width */
+    }
+    
+       
+    .main-innernav #menu {
+        display: block;
+        margin: auto;
+        margin-top: 1rem;
+        position: relative;
+        top: 2px;
+        right: -170px;
+    }
+    /* Additional styles specific to screens up to 480px can be added here */
+}

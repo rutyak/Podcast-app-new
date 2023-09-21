@@ -1,0 +1,90 @@
+.banner-premium{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18rem;
+    overflow: hidden;
+}
+
+.premium-main {
+    text-align: left;
+    border: 1px solid gray;
+    background: bisque;
+    width: 70%;
+    border-radius: 4rem;
+    margin: auto;
+    margin-top: 4rem;
+    padding: 1rem;
+    overflow: hidden;
+}
+
+.premium-main button{
+    width: 13rem;
+    height: 2rem;
+    border-radius: 0.5rem;
+    margin-right: -4rem;
+    margin-left: 5rem;
+    background-color: #db9147;
+    overflow: hidden;
+
+}
+
+.banner-premium .buy-btn{
+   margin-left: 0;
+   height: 3rem;
+   background-color: azure;
+   width: 7rem;
+   font-weight: 600;
+   overflow: hidden;
+}
+
+.banner-premium .buy-btn:hover{
+    width: 10rem;
+}
+
+@media screen and (max-width: 991px) {
+  .banner-premium {
+    flex-direction: column; /* Stack elements vertically */
+    gap: 2rem; /* Reduce the gap between elements */
+  }
+
+  .premium-main {
+    width: 90%; /* Adjust width for medium-sized screens */
+    margin-top: -5rem; /* Add space at the top */
+  }
+
+  .premium-main button {
+    width: 100%; /* Full width for the button */
+    margin-left: 0; /* Reset left margin */
+    margin-top: 2rem; /* Add space between button and content */
+  }
+
+  .banner-premium .buy-btn {
+    width: 100%; /* Full width for the buy button */
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .premium-main {
+    width: 95%;
+    /* height: 140vh; */
+    margin-top: -8rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .premium-main {
+    width: 100%; /* Full width for small screens */
+    margin-top: -8rem;
+  }
+
+  .premium-main button {
+    width: 100%; /* Full width for the button */
+    margin-left: 0; /* Reset left margin */
+    margin-top: 2rem; /* Add space between button and content */
+  }
+
+  .banner-premium .buy-btn {
+    width: 100%; /* Full width for the buy button */
+  }
+}

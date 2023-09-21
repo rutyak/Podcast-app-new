@@ -1,0 +1,79 @@
+
+.banner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14rem;
+    padding-top: 3.5rem;
+    margin-top: -3rem;
+    height: 79vh;
+    background-color: var(--primary-color);
+    overflow: hidden;
+}
+
+.premium{
+    text-align: end;
+    width: 34rem;
+}
+
+.premium button{
+    background-color: black;
+    border: 1px solid gray;
+    color: white;
+    width: 10rem;
+    height: 2rem;
+    border-radius: 0.5rem
+}
+
+@media (max-width: 768px) {
+    .banner {
+        flex-direction: column; /* Stack elements vertically */
+        gap: 2rem; /* Reduce the gap between elements */
+        padding: 2rem; /* Add some padding */
+        height: 70vh; /* Allow the banner to grow with content */
+    }
+
+    .premium {
+        text-align: center; /* Center-align text */
+        width: 100%; /* Full width for smaller screens */
+    }
+
+    .premium button {
+        width: 100%; /* Full width for buttons */
+    }
+}
+
+@media (max-width: 991px) {
+    .banner {
+        flex-direction: column; /* Stack elements vertically */
+        gap: 2rem; /* Reduce the gap between elements */
+        padding: 2rem; /* Add some padding */
+        height: 86vh; /* Allow the banner to grow with content */
+    }
+
+    .premium {
+        text-align: center; /* Center-align text */
+        width: 100%; /* Full width for smaller screens */
+    }
+
+    .premium button {
+        width: 100%; /* Full width for buttons */
+    }
+}
+
+/* Media query for screens with a maximum width of 480px (typical mobile phone) */
+@media (max-width: 480px) {
+    .banner {
+        gap: 1rem; /* Reduce gap further for smaller screens */
+        padding: 1rem; /* Add more padding */
+        height: 89vh;
+    }
+
+    .premium {
+        width: 100%; /* Full width for smaller screens */
+    }
+
+    .premium button {
+        width: 100%; /* Full width for buttons */
+    }
+}

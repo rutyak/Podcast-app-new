@@ -1,0 +1,115 @@
+
+.signup{
+    margin-top: 4rem;
+    border: 1px solid gray;
+    width: 30%;
+    text-align: center;
+    margin: auto;
+    margin-top: 4rem;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.signup input{
+    width: 85%;
+    height: 1.7rem;
+    border: 1px solid gray;
+    border-radius: 0.3rem;
+    padding: 0.2rem;
+    padding-left: 1rem;
+    margin-bottom: 1.5rem; 
+    background-color: var(--primary-inputs);
+    color: var(--secondary-inputs);
+}
+
+.signup button{
+    width: 81%;
+    border-radius: 1rem;
+    height: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    background-color: #8dba91;
+    color: black;
+}
+
+.signup h1{
+    margin-bottom: 2rem;
+}
+
+.para{
+   margin-top: 2.5rem;
+   padding-bottom: 2rem;
+}
+
+.upload{
+    width: 85%;
+    height: 1.7rem;
+    border: 1px solid gray;
+    border-radius: 0.3rem;
+    /* padding: 0.2rem; */
+    padding-top: 0.3rem;
+    padding-left: 1rem;
+    margin-bottom: 1.5rem;
+    text-align: left;
+    margin-left: 1.5rem;
+    background-color: var(--primary-inputs);
+    color: var(--secondary-inputs);
+}
+
+.active{
+    border: 0.2rem solid gray;
+}
+
+@media screen and (max-width: 991px) {
+    .signup {
+        width: 50%; /* Adjust the form width for medium screens */
+    }
+
+    .signup input,
+    .signup button,
+    .textarea,
+    .upload {
+        width: 89%; /* Make form elements full width */
+    }
+
+    /* Additional styles specific to screens up to 991px can be added here */
+}
+
+
+@media screen and (max-width: 780px) {
+    .signup {
+        width: 80%; /* Adjust the form width */
+    }
+
+    .signup input,
+    .signup button,
+    .textarea,
+    .upload {
+        width: 88%; /* Make form elements full width */
+    }
+
+    /* Additional styles specific to screens up to 780px can be added here */
+}
+
+/* Media query for screens up to 480px */
+@media screen and (max-width: 480px) {
+    .signup {
+        width: 90%; /* Adjust the form width */
+    }
+
+    .signup input,
+    .signup button,
+    .textarea,
+    .upload {
+        width: 88%;/* Make form elements full width */
+    }
+    
+    .main-innernav #menu {
+        display: block;
+        margin: auto;
+        margin-top: 1rem;
+        position: relative;
+        top: 2px;
+        right: -170px;
+    }
+    /* Additional styles specific to screens up to 480px can be added here */
+}
