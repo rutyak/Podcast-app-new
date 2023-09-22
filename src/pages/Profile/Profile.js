@@ -1,14 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Innernav from '../../components/Navbar/Innernav';
 import { toast } from 'react-toastify';
 import { signOut } from 'firebase/auth';
-import { auth, db, storage } from '../../firebase';
+import { auth, db } from '../../firebase';
 import './Profile.css';
 import { useNavigate, useParams } from 'react-router-dom';
-import { InputText } from 'primereact/inputtext';
-import { getDownloadURL, ref, uploadBytes } from 'firebase/storage';
-import { addDoc, collection, deleteDoc, doc, onSnapshot, query } from 'firebase/firestore';
+import { collection, deleteDoc, doc, onSnapshot, query } from 'firebase/firestore';
 import { setPodcasts } from '../../slice/podcastsSlice';
 import Podcastcard from '../../components/Podcastcard';
 
@@ -28,7 +26,7 @@ const Profile = () => {
 
   useEffect(() => {
     if(id){
-    const unsub = onSnapshot(
+    onSnapshot(
       query(collection(db, "podcasts")), 
       (querySnapshot) => {
         const podcastsData = [];
@@ -44,7 +42,7 @@ const Profile = () => {
     );
   }
 
-  },[user])
+  },[id, dispatch])
 
 
   function handleLogout() {

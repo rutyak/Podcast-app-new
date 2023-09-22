@@ -11,7 +11,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { useEffect } from 'react';
 import { onAuthStateChanged } from 'firebase/auth';
 import { auth, db } from './firebase';
-import { doc, onSnapshot, query, collection } from 'firebase/firestore';
+import { doc, onSnapshot } from 'firebase/firestore';
 import { setUser } from './slice/userSlice';
 import { useDispatch } from 'react-redux';
 import Podcastdetails from './pages/Podcast/Podcastdetails';
@@ -19,7 +19,7 @@ import CreateAnEpisode from './pages/Podcast/CreateAnEpisode';
 import Subscriber from './pages/Profile/Subscriber';
 import Premium from './pages/Premium/Premium';
 import Payment from './pages/Premium/Payment';
-import { setPodcasts } from './slice/podcastsSlice';
+
 import PrivateRouter from './components/PrivateRouter'
 import Downloaded from './pages/Premium/Downloaded';
 import AccessPremium from './pages/Premium/AccessPremium';

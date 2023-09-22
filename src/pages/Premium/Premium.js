@@ -15,13 +15,13 @@ const Premium = () => {
         <div className='premium-main'>
         <div  className='banner-premium'>
             <div>
-                <img src={image} style={{width: "55px"}}/>
+                <img src={image} style={{width: "55px"}} alt='img'/>
                 <h1 style={{ color: 'darkgoldenrod'}}>Go Premium.</h1>
                 <h1 style={{ color: 'darkgoldenrod'}}>Go Unlimited.</h1><hr/>
                 <button onClick={()=>navigate('/payment')} className='buy-btn'>Buy Premium</button>
             </div>
             <div>
-                <img src={image2}/>
+                <img src={image2} alt='img'/>
             </div>
         </div>
         <div className='buttons' style={{ color: 'darkgoldenrod'}}>
