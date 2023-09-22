@@ -31,9 +31,6 @@ const Podcast = () => {
     }
     );
 
-    return () =>{
-      unsub();
-    }
   },[dispatch])
 
 
