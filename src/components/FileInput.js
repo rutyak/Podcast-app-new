@@ -1,24 +1,28 @@
 import React, { useState } from 'react';
 
-const FileInput = ({ accept, id, text, fileFun }) => {
+const FileInput = ({ accept, id, text, fileFun }) => {   // for image and audio inputs
   const [file, setFile] = useState(null);
 
   function onChange(e) {
-    const selectedFile = e.target.files[0];
+    const selectedFile = e.target.files[0];   
     console.log(selectedFile);
-    setFile(selectedFile ? selectedFile.name : null);
-    fileFun(selectedFile);
+    setFile(selectedFile ? selectedFile.name : null);   //  file name will display when file selected
+    fileFun(selectedFile);  // passgin to fileFun
   }
 
   return (
-    <div className={`upload ${file ? 'active' : 'input-upload'}`}>
-      <label htmlFor={id}>{file ? `${file}` : text}</label>
+
+    // css when file selected then border get highlighted
+    <div className={`upload ${file ? 'active' : 'input-upload'}`}>    
+
+      {/* // setting file name when selected */}
+      <label htmlFor={id}>{file ? `${file}` : text}</label>   
       <input
         type="file"
         accept={accept}
         id={id}
         style={{ display: 'none' }}
-        onChange={onChange}
+        onChange={onChange} 
       />
     </div>
   );

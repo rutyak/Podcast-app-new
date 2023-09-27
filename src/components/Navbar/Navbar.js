@@ -14,7 +14,7 @@ const Navbar = () => {
 
   function handleTheme(){
      console.log("Theme toggled");
-     setDarkTheme(!darkTheme);
+     setDarkTheme(!darkTheme);  // !darktheme convert true to false and flase to true
     
     
 
@@ -25,7 +25,7 @@ const Navbar = () => {
       document.body.classList.remove("dark-theme")
      }
 
-     setImageIndex((imageIndex + 1)% Images.length);
+     setImageIndex((imageIndex + 1)% Images.length);  // it is for image toggle  1 % 2 = 1 if one then dark mode will set
     
   }
 
@@ -42,7 +42,9 @@ const Navbar = () => {
         <Link to="/createpodcast">Start a podcast</Link>
         <Link to="/profile">Profile</Link>
         <Link to="/signup" className='right'>Login/SignUp</Link>       
-        <p>Theme</p><img id='theme' src={Images[imageIndex]} onClick={handleTheme} alt='img'></img> 
+
+        {/* // theme */}
+        <p>Theme</p><img id='theme' src={Images[imageIndex]} onClick={handleTheme} alt='img'></img>  
       </div>
     </div>
   )

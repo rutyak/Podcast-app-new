@@ -22,11 +22,11 @@ const Podcastdetails = () => {
 
     async function getData() {
       try {
-        const docRef = doc(db, "podcasts", id);
-        const docSnap = await getDoc(docRef);
+        const docRef = doc(db, "podcasts", id); // path 
+        const docSnap = await getDoc(docRef);  // geting data from firebase db
   
         if (docSnap.exists()) {
-          setPodcast({ id: id, ...docSnap.data() });
+          setPodcast({ id: id, ...docSnap.data() });   // set podcast 
         } else {
           console.log("No such document!")
           navigate("/podcast");
@@ -44,15 +44,15 @@ const Podcastdetails = () => {
 
   useEffect(() => {
 
-    async function newnewEpisodes(){
-      const q = query(collection(db, "podcasts", id, "episodes"));
-  
-      const querySnapshot = await getDocs(q);
+    async function newnewEpisodes(){    
+      const q = query(collection(db, "podcasts", id, "episodes"));   // path for episode
+   
+      const querySnapshot = await getDocs(q);   // getting document of episode
       const episodeArray = [];
       querySnapshot.forEach((doc) => {
-         episodeArray.push({id: doc.id, ...doc.data()})
+         episodeArray.push({id: doc.id, ...doc.data()})     // episode data
        });
-       setEpisode(episodeArray);
+       setEpisode(episodeArray);   // setting episode array
      }
 
     if (id) {
@@ -88,8 +88,8 @@ const Podcastdetails = () => {
             <div>{episode.length > 1 ?
             (
             <div>
-              { episode.map((episode, index) =>{
-                   return  <Episodedetails key={index} 
+              { episode.map((episode, index) =>{           // display episodes
+                   return  <Episodedetails key={index}     // from episodeDetails
                              index={index + 1} 
                              title={episode.title}
                              description={episode.description}
@@ -106,7 +106,8 @@ const Podcastdetails = () => {
         </div>
       )}
 
-      { audio && <Audioplayer audioSrc={audio} image={podcast.displayImage} />}
+      {/* audio player  to audioPLayer*/}
+      { audio && <Audioplayer audioSrc={audio} image={podcast.displayImage} />}   
     </div>
   );
 };

@@ -7,13 +7,13 @@ const PrivateRouter = () => {
 
   const [user, loading, error] = useAuthState(auth);
 
-  if(loading){
+  if(loading){   // when loading  show loading
     return <p>Loading...</p>
   }
-  else if(!user || error){
+  else if(!user || error){  // when error redirected towards home page
     return <Navigate to="/" replace />
   }
-  else{
+  else{  // desired page
     return <Outlet />
   }
 }

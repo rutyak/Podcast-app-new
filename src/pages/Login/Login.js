@@ -23,7 +23,7 @@ const Login = () => {
     setLoading(true);
     try{
 
-      let userCredentials = await signInWithEmailAndPassword(
+      let userCredentials = await signInWithEmailAndPassword(    // authentication
         auth,
         email,
         password
@@ -43,7 +43,7 @@ const Login = () => {
           uid: user.uid,
         }))
       toast.success("Successfully login!!")
-      navigate("/profile")
+      navigate("/podcast")
     }
     catch(e){
       console.log(e);
@@ -66,10 +66,11 @@ const Login = () => {
         onChange={(e)=>setPassword(e.target.value)}
         value={password}
         placeholder='Password'
-        required
+        require
         ></input><br></br>
-
-        <button onClick={handleLogin}>{loading ? "Loading...": "Login"}</button>
+        
+        {/* loading when login */}
+        <button onClick={handleLogin}>{loading ? "Loading...": "Login"}</button>   
         <p className='para'>Don't have account?<Link to='/profile'>Signup</Link></p>
     </div>
     </>

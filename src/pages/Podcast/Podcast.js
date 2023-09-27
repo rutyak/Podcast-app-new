@@ -11,17 +11,17 @@ import Podcastcard from '../../components/Podcastcard'
 const Podcast = () => {
 
   const dispatch = useDispatch();
-  const podcasts = useSelector((state) => state.podcasts.podcasts);
+  const podcasts = useSelector((state) => state.podcasts.podcasts);   // data from redux
   const [search, setSearch] = useState("");
   console.log(podcasts);
 
   useEffect(() => {
-    const unsub = onSnapshot(
-      query(collection(db, "podcasts")), 
+    const unsub = onSnapshot(   // when chnage callback get called
+      query(collection(db, "podcasts")),    // obj from db 
       (querySnapshot) => {
         const podcastsData = [];
-        querySnapshot.forEach((doc) => {
-          podcastsData.push({ id: doc.id, ...doc.data()})
+        querySnapshot.forEach((doc) => { 
+          podcastsData.push({ id: doc.id, ...doc.data()})   // pushing in array
           // console.log(doc.id, " => ", doc.data());
         });
         dispatch(setPodcasts(podcastsData));
@@ -39,7 +39,7 @@ const Podcast = () => {
 
 
 
-  const filtered = podcasts.filter((item) =>
+  const filtered = podcasts.filter((item) =>      // filter items
     item.title.toLowerCase().trim().includes(search.trim().toLowerCase())
    );
 
@@ -58,10 +58,10 @@ const Podcast = () => {
       </input>
       {filtered.length > 0 ? (
        <div className='cards'>
-       {filtered.map((item)=>{
+       {filtered.map((item)=>{   
             return (
             <>
-            <Podcastcard 
+            <Podcastcard              // to podcastCard
             key={item.id}
             title={item.title}
             displayImage={item.displayImage} 

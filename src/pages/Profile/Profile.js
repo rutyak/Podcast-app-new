@@ -12,29 +12,46 @@ import Podcastcard from '../../components/Podcastcard';
 
 const Profile = () => {
 
-  const { id } = useParams();
-  const dispatch = useDispatch();
-  const podcasts = useSelector((state) => state.podcasts.podcasts);
+  const { id } = useParams();  // taking id
+  const dispatch = useDispatch(); //initalizing dispatch
+  const podcasts = useSelector((state) => state.podcasts.podcasts); // data from redux
   console.log("podcastsDataprofile: ",podcasts);
+  let currentUser = auth.currentUser.uid; // current users id
+  let podcastCreater = "";
+  let src = "";
 
-  const navigate = useNavigate();
-  const user = useSelector((state) => state.user.user);
-  console.log('user', user);
+  
+  // Create a reversed copy of the podcasts array
+  const reversedPodcasts = [...podcasts].reverse(); // reverse because we need latest users details
+  
+  reversedPodcasts.forEach((podcast, i) => {
+    if (i < reversedPodcasts.length - 1 && podcast.createdBy !== reversedPodcasts[i + 1].createdBy) { // checking if different creater found 
+      src = reversedPodcasts[i + 1].profileImage; // Profile image of the new user
+      console.log("profile of satyam", src);
+      podcastCreater = reversedPodcasts[i + 1].createdBy; // Creator ID
+      console.log("satyam uid", podcastCreater);
+    }
+  });
+  
+
+  const navigate = useNavigate();  // initializing navigation
+  const user = useSelector((state) => state.user.user);  // user data from store
+  console.log('user', user); 
 
   
 
 
   useEffect(() => {
     if(id){
-    onSnapshot(
-      query(collection(db, "podcasts")), 
-      (querySnapshot) => {
-        const podcastsData = [];
+    onSnapshot(                                   // it is a listener for changes in document
+      query(collection(db, "podcasts")),          // podcast data path
+      (querySnapshot) => {                        // callback of onSnapshot
+        const podcastsData = [];                  // array for podcast data
         querySnapshot.forEach((doc) => {
-          podcastsData.push({ id: doc.id, ...doc.data()})
+          podcastsData.push({ id: doc.id, ...doc.data()})   // id and data
           // console.log(doc.id, " => ", doc.data());
         });
-        dispatch(setPodcasts(podcastsData));
+        dispatch(setPodcasts(podcastsData));   // saving in redux
     },
     (error)=>{
       console.log("error", error);
@@ -42,11 +59,11 @@ const Profile = () => {
     );
   }
 
-  },[id, dispatch])
+  },[id, dispatch]) // execute when id load
 
 
   function handleLogout() {
-    signOut(auth)
+    signOut(auth)      // use for log out 
       .then(() => {
         toast.success('User logged out!!');
       })
@@ -55,15 +72,15 @@ const Profile = () => {
       });
   }
 
-  function handleSub(){
+  function handleSub(){  
     navigate("/subscriber")
   }
 
-  function handleMyPod(){
+  function handleMyPod(){ 
     navigate("/podcast")
   }
 
-  async function handleDelete(podcastId) {
+  async function handleDelete(podcastId) {   // delete podcast
     try {
       await deleteDoc(doc(db, "podcasts", podcastId));
       toast.success('Podcast deleted successfully!');
@@ -78,7 +95,7 @@ const Profile = () => {
       <Innernav />
       <div className="profile">
         <div className="profile-top">
-          <img src={podcasts[0].profileImage} alt="img" />
+          <img src={src} alt="img" />
           <div className='email-name'>
             <h3>{user.name}</h3>
             <p>{user.email}</p>
@@ -100,24 +117,29 @@ const Profile = () => {
       <div className='history'>
          <h2>Podcast History</h2>
          <div>
-         {podcasts.length > 0 ? (
-               <div className='cards'>
-                 {podcasts.map((item)=>{
-                     return (
-                <>
-                <Podcastcard
-                   key={item.id}
-                   title={item.title}
-                   displayImage={item.displayImage} 
-                   id={item.id}/>
-                  <button onClick={() => handleDelete(item.id)}>Delete podcast</button>
-                </>
-                 )
-                })
-                }
-                </div>)
-                : (<p>Not Found</p>)
-          }
+
+        { podcasts.length > 0 ? (    // when podcast data vailable
+                  <div className='cards'>
+                    { podcasts.map((item)=>{
+                       if (item.createdBy === currentUser) {   // only showing the history of current user
+                        return (
+                          <>
+                          <Podcastcard
+                             key={item.id}
+                             title={item.title}
+                             displayImage={item.displayImage} 
+                             id={item.id}/>
+                            <button onClick={() => handleDelete(item.id)}>Delete podcast</button>
+                          </>
+                           )
+                       }
+                    
+                   })
+                   }
+                   </div>)
+                   : (<p>Not Found</p>)
+             }
+       
          </div>
         </div>
       </div>

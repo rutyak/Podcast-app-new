@@ -52,14 +52,14 @@ hr {
 
 @media screen and (max-width: 991px) {
   .profile {
-    width: 90%; /* Adjust width for medium-sized screens */
-    margin-top: 2rem; /* Add space at the top */
+    width: 90%; 
+    margin-top: 2rem; 
   }
 
   .profile button {
-    width: 100%; /* Full width for the button */
-    margin-left: 0; /* Reset left margin */
-    margin-top: 2rem; /* Add space between button and content */
+    width: 100%; 
+    margin-left: 0;
+    margin-top: 2rem; 
   }
 
   .profile-top img {
@@ -69,14 +69,14 @@ hr {
 
 @media screen and (max-width: 780px) {
   .profile {
-    width: 95%; /* Adjust width for smaller screens */
+    width: 95%; 
   }
 }
 
 @media screen and (max-width: 480px) {
   .profile {
-    width: 100%; /* Full width for small screens */
-    margin-top: 1rem; /* Add space at the top */
+    width: 100%; 
+    margin-top: 1rem; 
   }
 
   .main-innernav #menu {
@@ -85,12 +85,12 @@ hr {
     margin-top: 1rem;
     position: relative;
     top: 2px;
-    right: 0; /* Reset right position */
+    right: 0; 
   }
 
   .profile-top {
-    flex-direction: column; /* Stack elements vertically */
-    gap: 1rem; /* Reduce the gap between elements */
+    flex-direction: column; 
+    gap: 1rem; 
   }
 
   .email-name {
@@ -98,26 +98,26 @@ hr {
   }
 
   .profile-top img {
-    margin-left: 0; /* Reset left margin */
+    margin-left: 0; 
   }
 
   .profile button {
-    width: 100%; /* Full width for the button */
-    margin-left: 0; /* Reset left margin */
-    margin-top: 1rem; /* Add space between button and content */
+    width: 100%; 
+    margin-left: 0; 
+    margin-top: 1rem; 
   }
 }
 
 @media screen and (max-width: 991px) {
     .profile {
-      width: 90%; /* Adjust width for medium-sized screens */
-      margin-top: 2rem; /* Add space at the top */
+      width: 90%; 
+      margin-top: 2rem; 
     }
   
     .profile button {
-      width: 100%; /* Full width for the button */
-      margin-left: 0; /* Reset left margin */
-      margin-top: 2rem; /* Add space between button and content */
+      width: 100%; 
+      margin-left: 0; 
+      margin-top: 2rem; 
     }
 
     .profile-top img{
@@ -127,14 +127,14 @@ hr {
   
   @media screen and (max-width: 780px) {
     .profile {
-      width: 95%; /* Adjust width for smaller screens */
+      width: 95%; 
     }
   }
   
   @media screen and (max-width: 480px) {
     .profile {
-      width: 100%; /* Full width for small screens */
-      margin-top: 1rem; /* Add space at the top */
+      width: 100%; 
+      margin-top: 1rem; 
     }
   
     .main-innernav #menu {
@@ -147,8 +147,8 @@ hr {
      }
 
     .profile-top {
-      flex-direction: column; /* Stack elements vertically */
-      gap: 1rem; /* Reduce the gap between elements */
+      flex-direction: column; 
+      gap: 1rem; 
     }
 
     .email-name{
@@ -156,13 +156,13 @@ hr {
     }
   
     .profile-top img {
-      margin-left: 0; /* Reset left margin */
+      margin-left: 0; 
     }
   
     .profile button {
-      width: 100%; /* Full width for the button */
-      margin-left: 0; /* Reset left margin */
-      margin-top: 1rem; /* Add space between button and content */
+      width: 100%;
+      margin-left: 0;
+      margin-top: 1rem; 
     }
   }
 

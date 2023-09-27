@@ -44,23 +44,23 @@
 
 @media screen and (max-width: 991px) {
   .banner-premium {
-    flex-direction: column; /* Stack elements vertically */
-    gap: 2rem; /* Reduce the gap between elements */
+    flex-direction: column; 
+    gap: 2rem; 
   }
 
   .premium-main {
-    width: 90%; /* Adjust width for medium-sized screens */
-    margin-top: -5rem; /* Add space at the top */
+    width: 90%; 
+    margin-top: -5rem; 
   }
 
   .premium-main button {
-    width: 100%; /* Full width for the button */
-    margin-left: 0; /* Reset left margin */
-    margin-top: 2rem; /* Add space between button and content */
+    width: 100%; 
+    margin-left: 0; 
+    margin-top: 2rem; 
   }
 
   .banner-premium .buy-btn {
-    width: 100%; /* Full width for the buy button */
+    width: 100%; 
   }
 }
 
@@ -74,17 +74,17 @@
 
 @media screen and (max-width: 480px) {
   .premium-main {
-    width: 100%; /* Full width for small screens */
+    width: 100%; 
     margin-top: -8rem;
   }
 
   .premium-main button {
-    width: 100%; /* Full width for the button */
-    margin-left: 0; /* Reset left margin */
-    margin-top: 2rem; /* Add space between button and content */
+    width: 100%; 
+    margin-left: 0; 
+    margin-top: 2rem; 
   }
 
   .banner-premium .buy-btn {
-    width: 100%; /* Full width for the buy button */
+    width: 100%; 
   }
 }

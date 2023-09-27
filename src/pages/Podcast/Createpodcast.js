@@ -26,30 +26,31 @@ const Contact = () => {
     console.log(displayImg);
     console.log(bannerImg);
     try {
-      if (title && desc && displayImg && bannerImg && profileImg) {
+      if (title && desc && displayImg && bannerImg && profileImg) {    
         //banner image
-        const banner = ref(
+        const banner = ref(   
           storage,
           `podcast/${auth.currentUser.uid}/${Date.now()}`
-        );
-        await uploadBytes(banner, bannerImg);
+        );          // storage needed for image objects. storage path creating here
+
+        await uploadBytes(banner, bannerImg);     // uploading in storage
         const bannerImgUrl = await getDownloadURL(banner);
 
         //display image
         const display = ref(
           storage,
           `podcast/${auth.currentUser.uid}/${Date.now()}`
-        );
-        await uploadBytes(display, displayImg);
+        );          // storage needed for image objects. storage path creating here
+        await uploadBytes(display, displayImg);   // uploading in storage
         const displayImgUrl = await getDownloadURL(display);
 
         //profile image
         const profileRef = ref(
           storage,
           `podcast/${auth.currentUser.uid}/${Date.now()}`
-        );
-        await uploadBytes(profileRef, profileImg);
-        const profileUrl = await getDownloadURL(profileRef);
+        );          // storage needed for image objects. storage path creating here
+        await uploadBytes(profileRef, profileImg);   // uploading in storage
+        const profileUrl = await getDownloadURL(profileRef);   // downloadable link
 
         const podcastsData = {
           title: title,
@@ -60,10 +61,10 @@ const Contact = () => {
           createdBy: auth.currentUser.uid,
         };
 
-        const docRef = await addDoc(collection(db, "podcasts"), podcastsData);
+        const docRef = await addDoc(collection(db, "podcasts"), podcastsData);   // adding in database  not storing in redux because it will not a good approach
 
         console.log("docRef", docRef);
-        setTitle("");
+        setTitle("");    // reset all
         setDesc("");
         setBannerImg(null);
         setDisplayImg(null);
@@ -107,7 +108,7 @@ const Contact = () => {
             }}
           ></textarea>
 
-          <FileInput
+          <FileInput                     // input from fileInput
             accept="image/*"
             id="banner-image"
             text="Podcast image upload"

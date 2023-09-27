@@ -2,7 +2,7 @@ import React from 'react'
 import "./Podcastcard.css"
 import { Link } from 'react-router-dom'
 
-const Podcastcard = ({title, displayImage, id}) => {
+const Podcastcard = ({title, displayImage, id}) => {  // podcast card  // for podcastDetails
   return (
     <Link to={`/podcast/${id}`}>
     <div className='podcast-cards' >
