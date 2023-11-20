@@ -55,4 +55,8 @@
         right: -144px;
     }
 
+    .top-podcast-details button{
+        width: 31%;
+        height: 2.3rem;
+    }
 }
