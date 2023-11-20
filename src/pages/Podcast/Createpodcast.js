@@ -100,11 +100,14 @@ const Contact = () => {
             placeholder="Podcast description"
             required
             style={{
-              height: "100px",
-              marginBottom: "1rem",
-              resize: "none",
-              paddingLeft: "0.5rem",
-              paddingTop:"0.5rem"
+              height: '100px',
+              marginBottom: '1rem',
+              resize: 'none',
+              paddingLeft: '0.5rem',
+              paddingTop: '0.5rem',
+              width: '87%',
+              borderRadius: '0.3rem',
+              background: 'color: var(--secondary-inputs)'
             }}
           ></textarea>
 

@@ -31,7 +31,7 @@ const Login = () => {
       const user = userCredentials.user;
       
      
-      // saving in database
+      // getting from database
       const userDoc = await getDoc(doc(db,"users",user.uid));
       const userData = userDoc.data();
       console.log("userData", userData)

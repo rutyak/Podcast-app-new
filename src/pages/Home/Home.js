@@ -15,7 +15,7 @@ const Home = () => {
   return (
     <div>
       <Navbar />
-      <div className='banner'>
+      <div className='banner' style={{display: 'flex'}}>
            <img src={homeImg} alt='img' />
            <div className='premium'>
                 <h1>Listen Premium podcasts</h1>

@@ -75,14 +75,14 @@ const CreateAnEpisode = () => {
             type="text"
             onChange={(e) => setTitle(e.target.value)}
             value={title}
-            placeholder="Podcast title"
+            placeholder="Episode title"
             required
           /><br></br>
           <input
             type="text"
             onChange={(e) => setDesc(e.target.value)}
             value={desc}
-            placeholder="Podcast description"
+            placeholder="Episode description"
             required
           /><br></br>
 

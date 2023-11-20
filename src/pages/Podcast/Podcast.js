@@ -61,7 +61,7 @@ const Podcast = () => {
        {filtered.map((item)=>{   
             return (
             <>
-            <Podcastcard              // to podcastCard
+            <Podcastcard              // from podcastCard
             key={item.id}
             title={item.title}
             displayImage={item.displayImage} 

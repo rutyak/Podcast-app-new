@@ -38,3 +38,28 @@
     align-items: center;
     gap: 0.5rem;
 }
+
+@media screen and (max-width: 480px) {
+    
+    .volume-player input{
+        margin-right: 1.5rem;
+        width: 60%;
+    }
+}
+
+
+@media screen and (max-width: 780px) {
+    
+    .volume-player input{
+        margin-right: 1.5rem;
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    
+    .volume-player input{
+        margin-right: 1.5rem;
+        width: 60%;
+    }
+}

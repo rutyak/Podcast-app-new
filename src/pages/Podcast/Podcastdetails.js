@@ -107,7 +107,7 @@ const Podcastdetails = () => {
       )}
 
       {/* audio player  to audioPLayer*/}
-      { audio && <Audioplayer audioSrc={audio} image={podcast.displayImage} />}   
+      { audio && <Audioplayer audioSrc={audio} image={podcast.displayImage}/>}   
     </div>
   );
 };
